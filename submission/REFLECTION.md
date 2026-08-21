@@ -1,13 +1,11 @@
 # Reflection — Lab 21
 
-*Ngắn gọn, thành thật. Phần này chấm theo độ cụ thể, không theo độ dài.*
+1. The most surprising result was that the fine-tune reached 0.970 target accuracy but still failed the overall gate because regression dropped by 0.2133. Narrow-task success was not enough.
 
-**1. Điều gì làm bạn ngạc nhiên nhất?**
+2. The most time-consuming part was generating the four model comparisons on the T4. The controlled runs made it clear that model loading and generation, not only backpropagation, dominate the wall-clock time.
 
-**2. Bạn mất nhiều thời gian nhất ở đâu? Nó có phải chỗ bạn dự đoán không?**
+3. I no longer believe that lower training loss automatically means a better model. The attn_only run had lower loss than correct but only tied it on the target metric, while wrong_lr showed that the learning-rate scale can completely change the outcome.
 
-**3. Trước lab này bạn tin điều gì về fine-tuning mà giờ bạn không còn tin?**
+4. I used an AI assistant to inspect the pipeline, interpret the artifacts, and organize the report. It was wrong to assume that a successful target score meant deployment was safe; the regression gate and qualitative examples were necessary checks.
 
-**4. Bạn dùng AI assistant vào việc gì trong lab? Chỗ nào nó sai?**
-
-**5. Nếu ngày mai phải fine-tune cho một khách hàng thật, bước đầu tiên bạn làm là gì?**
+5. For a real customer, my first step would be to freeze an untouched evaluation set and define both task success and regression-safety gates before training.

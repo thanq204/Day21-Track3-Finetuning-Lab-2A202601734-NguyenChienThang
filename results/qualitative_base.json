@@ -1,0 +1,87 @@
+[
+  {
+    "i": 0,
+    "ground_truth": {
+      "intent": "doi_tra",
+      "urgency": "cao",
+      "product": "chuột không dây",
+      "sentiment": "tich_cuc"
+    },
+    "base_optimized_pred": {
+      "intent": "hoan_tien",
+      "urgency": "cao",
+      "product": "chuột không dây",
+      "sentiment": "tich_cuc"
+    },
+    "fine_tune_score": 1.0,
+    "comparison_note": "Fine-tune corrects the intent."
+  },
+  {
+    "i": 1,
+    "ground_truth": {
+      "intent": "hoan_tien",
+      "urgency": "trung_binh",
+      "product": "ốp lưng điện thoại",
+      "sentiment": "tieu_cuc"
+    },
+    "base_optimized_pred": {
+      "intent": "hoan_tien",
+      "urgency": "cao",
+      "product": "ốp lưng điện thoại",
+      "sentiment": "tieu_cuc"
+    },
+    "fine_tune_score": 1.0,
+    "comparison_note": "Fine-tune corrects urgency."
+  },
+  {
+    "i": 3,
+    "ground_truth": {
+      "intent": "hoan_tien",
+      "urgency": "thap",
+      "product": "bình giữ nhiệt",
+      "sentiment": "tich_cuc"
+    },
+    "base_optimized_pred": {
+      "intent": "hoan_tien",
+      "urgency": "trung_binh",
+      "product": "bình giữ nhiệt",
+      "sentiment": "tich_cuc"
+    },
+    "fine_tune_score": 0.75,
+    "comparison_note": "Fine-tune still misses urgency; this is an imperfect/losing case."
+  },
+  {
+    "i": 5,
+    "ground_truth": {
+      "intent": "san_pham_loi",
+      "urgency": "thap",
+      "product": "nồi chiên không dầu",
+      "sentiment": "trung_tinh"
+    },
+    "base_optimized_pred": {
+      "intent": "hoan_tien",
+      "urgency": "cao",
+      "product": "nồi chiên không dầu",
+      "sentiment": "trung_tinh"
+    },
+    "fine_tune_score": 0.75,
+    "comparison_note": "Fine-tune fixes intent but still misses urgency."
+  },
+  {
+    "i": 12,
+    "ground_truth": {
+      "intent": "san_pham_loi",
+      "urgency": "thap",
+      "product": "áo khoác gió",
+      "sentiment": "tich_cuc"
+    },
+    "base_optimized_pred": {
+      "intent": "san_pham_loi",
+      "urgency": "trung_binh",
+      "product": "áo khoác gió",
+      "sentiment": "tich_cuc"
+    },
+    "fine_tune_score": 0.75,
+    "comparison_note": "Fine-tune still misses urgency; another imperfect/losing case."
+  }
+]
